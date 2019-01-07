@@ -1,0 +1,20 @@
+```
+kubectl get pod
+//get ip and node name
+kubectl get pod -o wide
+//login
+gcloud compute ssh gke-xx-xx(node name)
+//then
+docker ps
+docker container exec -it xxx "/bin/bash"
+
+//create a pod
+//pod.yaml:
+//metadate:
+//   name:somepod
+kubectl create -f pod.yaml
+
+//get pod info
+kubectl get pod somepod --output=yaml
+kubectl exec -it somepod -c someContainer -- /bin/bash
+```

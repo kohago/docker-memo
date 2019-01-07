@@ -1,0 +1,3 @@
+```
+kubectl create configmap [NAME] [DATA]
+```
