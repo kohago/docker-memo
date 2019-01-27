@@ -21,6 +21,7 @@
  
  #We can execute commands directly on the container once the Pod is up and running.
  kubectl exec - execute a command on a container in a pod
+ kubectl exec POD [-c CONTAINER] -- COMMAND [args...] [options]
  
  kubectl get pods
  kubectl describe pods
