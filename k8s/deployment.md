@@ -1,4 +1,4 @@
-##Deployment
+## Deployment
 - Deployment is a part of cluster master( in cluster master)
 - Deployment configuration(instructs Kubernetes how to create and update instances of your application)
 - Once the application instances are created, a Kubernetes Deployment Controller 
@@ -6,7 +6,7 @@
   - kubectl deployment provide a self-healing　mechanism to address machine failure or maintenance.
   - very better than deployment,installation scripts
  
- ###create a deployment to deploy your app
+ ### create a deployment to deploy your app
  
  - need to specify the container image for your application
  - need to specify the number of replicas that you want to run. (default is 3?)
