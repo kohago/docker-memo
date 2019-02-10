@@ -1,4 +1,4 @@
-##service(defines a logical set of Pods and a policy by which to access them.)
+## service(defines a logical set of Pods and a policy by which to access them.)
 -  each Pod in a Kubernetes cluster has a unique IP address,to be a way of automatically reconciling changes among Pods so that your applications continue to function.
 -  Services enable a loose coupling between dependent Pods.
 - A Kubernetes Service is an abstraction which defines a logical set of Pods and a policy by which to access them - sometimes called a micro-service. 
