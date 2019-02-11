@@ -54,3 +54,37 @@ kubectl get deployments
  kubectl apply -f yy.ymal
 
 ```
+- A Deployment’s rollout is triggered if and only if the Deployment’s pod template (that is, .spec.template) is changed, for example if the labels or container images of the template are updated. Other updates, such as scaling the Deployment, do not trigger a rollout.
+
+- 
+
+# labels
+
+```
+  apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    name: nginx-deployment
+    labels:
+      app: nginx
+  spec:
+    replicas: 3
+    selector:
+      matchLabels:
+        app: nginx
+    template:
+      metadata:
+        labels:
+          app: nginx
+      spec:
+        containers:
+        - name: nginx
+          image: nginx:1.7.9
+          ports:
+          - containerPort: 80
+  ```
+  - deployment's name= metadata.name
+  - The selector field defines how the Deployment finds which Pods to manage.matchLabels is a map of {key,value} pairs
+ 
+ 
+  
