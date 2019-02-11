@@ -1,4 +1,4 @@
-##troubl shooting 
+##trouble shooting 
 ```
 kubectl exec -it my-pod --container main-app -- /bin/bash
 #busybox is /bin/ash

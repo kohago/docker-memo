@@ -21,7 +21,7 @@ kubectl describe pods
 
 ```  
 
-- updte
+- update
 ```
 kubectl rollout undo deployment/deploymentName
 kubectl get pods
