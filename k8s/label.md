@@ -1,0 +1,2 @@
+- The set of pods that a service targets is defined with a label selector
+- 
