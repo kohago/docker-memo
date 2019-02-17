@@ -30,3 +30,9 @@ kubectl port-forward <pod_name> <local_port>:<pod_port>
  kubectl apply -f configMap.ymal
  kubectl patch deployment my-deployment --patch '{"spec": {"template": {"metadata": {"annotations": {"version/config": "20180411" }}}}}'
 ```
+
+## top 
+```
+kubectl top pod
+NAME   CPU(cores)   MEMORY(bytes)
+```
