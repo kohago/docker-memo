@@ -38,6 +38,8 @@ CPUベースオートスケーリングと同じように使用できる。autos
 ```
 kubectl get HorizontalPodAutoscaler xxx
 kubectl describe HorizontalPodAutoscaler xxx
-ubectl get pod
+kubectl top pod
+kubectl top node
+
 
 ```
