@@ -60,6 +60,10 @@
    - see cluster details 
    
     ```
+    gcloud container clusters get-credentials xxx
+    
+    gcloud container clusters describe xxxx
+    
     kubectl cluster-info
       Kubernetes master is running at https://192.168.99.100:8443
       KubeDNS is running at https://192.168.99.100:8443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
