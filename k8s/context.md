@@ -8,8 +8,11 @@ kubectl config set-context xxxxxx
 kubectl config view
 
 #delete kube config
-kubectl config unset clusters.someclusters
+kubectl config delete-cluster someclusters
+kubectl config delete-context somecontext
 
+#get azure kube credentials 
+az aks get-credentials --resource-group xx --name=aks-stage xx
 ```
 
 #gke
