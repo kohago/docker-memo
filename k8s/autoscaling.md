@@ -38,8 +38,8 @@ CPUベースオートスケーリングと同じように使用できる。autos
 ```
 kubectl get HorizontalPodAutoscaler xxx
 kubectl describe HorizontalPodAutoscaler xxx
-ubectl get pod
-
+kubectl top pod
+kubectl top node
 ```
 ## node autoscaling
 - node pool
@@ -55,4 +55,5 @@ gcloud container node-pools create xxx-pool --cluster=xxx-cluster --enable-autos
 #固定したインスタンス数で作って、そして、別のPreemptibleノードプールでオートスケーリングをする
 gcloud container create cluster xxx-cluster --num-nodes 3
 gcloud beta container node-pools create xxx-preemptible-pool --cluster=xxx-cluster --preemptible --num-nodes=0
+
 ```
