@@ -59,7 +59,7 @@
 patches:
   - target:
       kind: Deployment
-      labelSelector: io.kompose.service=api
+      labelSelector: io.kompose.service=hoge
     patch: |
       - op: replace
         path: /spec/template/spec/containers/0/ports/0/containerPort
@@ -71,9 +71,9 @@ patches:
     targets:
       - select:
           kind: Deployment
-          name: api-admin
+          name: api-hoge
         fieldPaths:
-          - spec.template.spec.containers.[name=api-admin].env.[name=PROFILE].value
+          - spec.template.spec.containers.[name=api-hoge].env.[name=PROFILE].value
   - source:
       kind: ConfigMap
       name: env
@@ -81,9 +81,9 @@ patches:
     targets:
       - select:
           kind: Job
-          name: cleaner-job
+          name: hoge-job
         fieldPaths:
-          - spec.template.spec.containers.[name=crawler].args.2
+          - spec.template.spec.containers.[name=hoge].args.2
 ```
 
 - kustomize のデフォルトの設定は kustomize config save コマンドで取得できます。
