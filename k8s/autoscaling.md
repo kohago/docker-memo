@@ -1,9 +1,9 @@
-## autoscaling
+## pod autoscaling
 - podのHorizontal pod autoscaling
 - scaled resource object:  
-  deployment,replicaSet,replicationController,statusfullset 
-  
-- 
+  deployment,replicaSet,replicationController,statusfullset
+
+-
 ```
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
@@ -40,6 +40,20 @@ kubectl get HorizontalPodAutoscaler xxx
 kubectl describe HorizontalPodAutoscaler xxx
 kubectl top pod
 kubectl top node
+```
+## node autoscaling
+- node pool
+```
+#オートスケーラーを有効にしたノードプールが含まれるクラスターを作る
+gcloud container cluster create xxx-cluster --enable-autoscaling --min-nodes=1 --max-nodes=5
 
+#あとnode poolを追加
+gcloud container node-pools create xxx-pool --cluster=xxx-cluster --enable-autoscaling --min-nodes=1 --max-nodes=5
+```
+- preemptible pool + node pool
+```
+#固定したインスタンス数で作って、そして、別のPreemptibleノードプールでオートスケーリングをする
+gcloud container create cluster xxx-cluster --num-nodes 3
+gcloud beta container node-pools create xxx-preemptible-pool --cluster=xxx-cluster --preemptible --num-nodes=0
 
 ```

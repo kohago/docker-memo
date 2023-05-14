@@ -51,6 +51,7 @@ docker container port nigix-test
 //show the diffrences from started
 docker container diff nigix-test
 
-
+//stop all containers
+docker kill $(docker ps -q)
 
 ```
