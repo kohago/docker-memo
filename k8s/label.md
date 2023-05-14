@@ -23,4 +23,13 @@
         labels:
           app: moverick-mule-pre
           commit: $CI_COMMIT_SHA
- ```
+  ```
+  
+- add lable to pod
+```
+#the label will be valid after addition
+kubectl label pods podname label1=value1
+kubectl get pods --show-labels
+```
+
+

@@ -56,6 +56,7 @@ gcloud container clusters update xxx --enable-autoscaling --min-node=2 --max-nod
 gcloud container clusters update [CLUSTER_NAME] --enable-autoscaling \
     --min-nodes 1 --max-nodes 10 --zone [COMPUTE_ZONE] --node-pool default-pool
 ```
+
 - node-pool
  ```
  gcloud container node-pools create [POOL_NAME] --cluster [CLUSTER_NAME] \

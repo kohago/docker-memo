@@ -23,5 +23,4 @@ gcloud container clusters create xxx
 #generate entry for cluster
 gcloud container clusters get-credentials clusterName --region==xxxx
 
-
 ```
