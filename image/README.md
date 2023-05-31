@@ -1,4 +1,4 @@
-# build a image
+- build a image
 ```
 docker image build file Dockerfile --tag local/dockerfile-example:0.1
 #or
@@ -8,8 +8,15 @@ docker image ls
 docker image tag imageId local/dockerfile-example:0.2
 docker image inspect imageId
 ```
-
-#run it -> login -> change ->save change
+- entrypoint
+```
+When you set and entry point in a docker container.
+It is the only thing it will run. 
+It's the one and only process that matters (PID 1). 
+Once your entry_point.sh script finishes running and returns and exit code, 
+docker thinks the container has done what it needed to do and exits, since the only process inside it exits.
+```
+- run it -> login -> change ->save change
 ```
 docker container run --it --name test-image1 imageId /bin/sh
 
@@ -31,7 +38,7 @@ docker image save -o after-edited.tar local:after-edited
 
 ```
 
-#login to dockerhub and push the image1
+- login to dockerhub and push the image1
 ```
 docker login
 docker image push xx/xx:latest

@@ -34,10 +34,35 @@ curl minikubeIp:ServiceNodePorts
 
 ```
 
--scaling down
+- scaling down
 ```
 kubectl scale deployments/deploymentName --replicas=2
 kubectl get deployments
 kubectl get nodes -o wide
 
 ```
+
+- hpa(pod Horizental pod scaling)
+```
+kubectl get hpa
+kubectl del hpa
+```
+
+- cluster scaling
+```
+gcloud container clusters describe xxx
+gcloud container clusters update xxx --enable-autoscaling --min-node=2 --max-node=20 --node-pool xxx
+
+gcloud container clusters update [CLUSTER_NAME] --enable-autoscaling \
+    --min-nodes 1 --max-nodes 10 --zone [COMPUTE_ZONE] --node-pool default-pool
+```
+
+- node-pool
+ ```
+ gcloud container node-pools create [POOL_NAME] --cluster [CLUSTER_NAME] \
+     --enable-autoscaling --min-nodes 1 --max-nodes 5 [--zone [COMPUTE_ZONE]
+ ```
+ 
+ 
+
+
