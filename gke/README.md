@@ -1,4 +1,13 @@
-```
+- cli
+  - install 
+    - https://cloud.google.com/sdk/docs/install?hl=ja
+    - python3.7 
+  - login
+    - gcloud auth login
+    - gcloud config list
+    - gcloud config set ...
+    
+``````
 gcloud components list
 gcloud components install kubectl
 
